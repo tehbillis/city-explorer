@@ -24,3 +24,17 @@
 [gitignore.io - Automatically generate .gitignore files](https://gitignore.io/)
 
 [locationiq - Location API tools](https://locationiq.com/)
+
+
+## Time Tracking
+
+
+### Set up your react repository & API keys
+
+Estimate of time needed to complete: 20 min
+
+Start time: 9:50p
+
+Finish time: 10:27p
+
+Actual time needed to complete: 37 min

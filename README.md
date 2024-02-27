@@ -25,16 +25,16 @@
 
 [locationiq - Location API tools](https://locationiq.com/)
 
-
 ## Time Tracking
-
 
 ### Set up your react repository & API keys
 
-Estimate of time needed to complete: 20 min
+***
 
-Start time: 9:50p
+- Estimate of time needed to complete: 20 min
 
-Finish time: 10:27p
+- Start time: 9:50p
 
-Actual time needed to complete: 37 min
+- Finish time: 10:27p
+
+- Actual time needed to complete: 37 min

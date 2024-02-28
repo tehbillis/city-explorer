@@ -38,3 +38,15 @@
 - Finish time: 10:27p
 
 - Actual time needed to complete: 37 min
+
+### Locations
+
+***
+
+- Estimate of time needed to complete: 45 min
+
+- Start time: 9:00p
+
+- Finish time: 
+
+- Actual time needed to complete: 

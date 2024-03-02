@@ -53,3 +53,9 @@ p {
   width: 600px;
   height: 400px;
 }
+
+.alert {
+  margin-top: 2em;
+  margin-left: 15em;
+  margin-right: 15em;
+}

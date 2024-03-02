@@ -63,8 +63,8 @@
 
 - Estimate of time needed to complete: 1 h
 
-- Start time: 
+- Start time: 9:20p
 
-- Finish time: 
+- Finish time: 10:41p
 
-- Actual time needed to complete: 
+- Actual time needed to complete: 1h 21m

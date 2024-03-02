@@ -21,6 +21,12 @@
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
+## Technical Documents
+
+### Web Request Cycle
+
+![Web Request Cycle](./src/assets/City%20Explorer%20web%20request.jpg)
+
 [gitignore.io - Automatically generate .gitignore files](https://gitignore.io/)
 
 [locationiq - Location API tools](https://locationiq.com/)
@@ -46,6 +52,18 @@
 - Estimate of time needed to complete: 45 min
 
 - Start time: 9:00p
+
+- Finish time: 12:31A
+
+- Actual time needed to complete: 3h 31m
+
+### Map
+
+***
+
+- Estimate of time needed to complete: 1 h
+
+- Start time: 
 
 - Finish time: 
 

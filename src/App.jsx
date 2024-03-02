@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import CitySearch from './components/CitySearch';
 import Footer from './components/Footer';
-import Card from 'react-bootstrap/Card';
+import City from './components/City';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
 import axios from "axios";
@@ -19,8 +19,8 @@ function App() {
 
     const response = await axios.get(API);
 
-    setLat(`Latitude: ${response.data[0].lat}`);
-    setLon(`Longitude: ${response.data[0].lon}`);
+    setLat(response.data[0].lat);
+    setLon(response.data[0].lon);
 
     setLocation(response.data[0]);
   }
@@ -42,11 +42,7 @@ function App() {
     <Header />
     <main>
       <CitySearch onChange={updateQuery} onSubmit={queryLocation} location={location.displayName} />
-      <Card>
-        <Card.Title>{location.display_name}</Card.Title>
-        <Card.Text>{lat}</Card.Text>
-        <Card.Text>{lon}</Card.Text>
-      </Card>
+      <City location={[lat, lon]} mapKey={API_KEY} displayName={location.display_name}/>
     </main>
     <Footer />
     </>

@@ -40,3 +40,11 @@ p {
   margin: 2em;
   border-width: 0;
 }
+
+.card-title {
+  margin-top: 1em;
+}
+
+.card-text {
+  margin-bottom: 0;
+}

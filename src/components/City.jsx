@@ -2,6 +2,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
+import Weather from "./Weather";
 
 function Map (props) {
   if(props.location[0] !== '') {
@@ -16,6 +17,11 @@ function Map (props) {
               <Card.Text>Lattitude: {props.location[0]}</Card.Text>
               <Card.Text>Longitude: {props.location[1]}</Card.Text>
             </Card>
+          </Col>
+
+          <Col>
+            <h3 className="weatherHeader">Weather</h3>
+            <Weather forecast={props.forecast}/>
           </Col>
         </Row>
       </Container>

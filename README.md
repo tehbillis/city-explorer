@@ -98,8 +98,8 @@ This application will be using the following technlology:
 
 - Estimate of time needed to complete: 1 h
 
-- Start time: 10:50p
+- Start time: 12:00p
 
-- Finish time: 11:20p
+- Finish time: 1:20p
 
-- Actual time needed to complete: 30m
+- Actual time needed to complete: 1h 20m

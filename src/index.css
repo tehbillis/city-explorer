@@ -54,8 +54,27 @@ p {
   height: 400px;
 }
 
+.accordion {
+  margin: 2em;
+}
+
 .alert {
   margin-top: 2em;
   margin-left: 15em;
   margin-right: 15em;
+}
+
+.weatherHeader {
+  margin-top: 1em;
+  margin-left: 1.2em;
+}
+
+.weatherCard {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid #ddd; /* Thin border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #333;
 }

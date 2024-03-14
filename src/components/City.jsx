@@ -20,7 +20,6 @@ function Map (props) {
           </Col>
 
           <Col>
-            <h3 className="weatherHeader">Weather</h3>
             <Weather forecast={props.forecast}/>
           </Col>
         </Row>

@@ -51,8 +51,7 @@ function App() {
   }
 
   async function getWeather(data) {
-    const displayName = data.display_name ? data.display_name.split(',')[0].trim() : '';
-    const weatherAPI = `http://localhost:3939/weather?lat=${encodeURIComponent(data.lat)}&lon=${encodeURIComponent(data.lon)}&searchQuery=${encodeURIComponent(displayName)}`;
+    const weatherAPI = `http://localhost:3939/weather?lat=${encodeURIComponent(data.lat)}&lon=${encodeURIComponent(data.lon)}`;
 
     try {
       const response = await axios.get(weatherAPI);

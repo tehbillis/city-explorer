@@ -8,6 +8,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+const CITY_API = import.meta.env.VITE_CITY_API;
 
 function App() {
   const [location, setLocation] = useState({display_name: ''});
@@ -15,6 +16,7 @@ function App() {
   const [lat, setLat] = useState('');
   const [lon, setLon] = useState('');
   const [weather, setWeather] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [showError, setShowError] = useState(false);
   const [errorCode, setErrorCode] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -48,10 +50,17 @@ function App() {
 
     // Go and get the weather for the location
     getWeather(response.data[0]);
+
+    // Go and get the movies related to the city
+    let locationInfo = response.data[0].display_name ? response.data[0].display_name.split(',') : '';
+
+    locationInfo = locationInfo.map(item => item.trim()).join(',');
+
+    getMovies(locationInfo);
   }
 
   async function getWeather(data) {
-    const weatherAPI = `http://localhost:3939/weather?lat=${encodeURIComponent(data.lat)}&lon=${encodeURIComponent(data.lon)}`;
+    const weatherAPI = `${CITY_API}/weather?lat=${encodeURIComponent(data.lat)}&lon=${encodeURIComponent(data.lon)}`;
 
     try {
       const response = await axios.get(weatherAPI);
@@ -59,6 +68,22 @@ function App() {
       setWeather(response.data);
     } catch (error) {
       // Handle the error here
+      if (error.response) {
+        setErrorMessage(error.response.data);
+        setErrorCode(error.response.status);
+        setShowError(true);
+      }
+    }
+  }
+
+  async function getMovies(data) {
+    const movieAPI = `${CITY_API}/movies?location=${encodeURIComponent(data)}`;
+
+    try {
+      const response = await axios.get(movieAPI);
+
+      setMovies(response.data);
+    } catch (error) {
       if (error.response) {
         setErrorMessage(error.response.data);
         setErrorCode(error.response.status);
@@ -87,7 +112,7 @@ function App() {
 
       <Error showError={showError} errorCode={errorCode} errorMessage={errorMessage} />
       
-      <City location={[lat, lon]} mapKey={API_KEY} displayName={location.display_name} forecast={weather}/>
+      <City location={[lat, lon]} mapKey={API_KEY} displayName={location.display_name} forecast={weather} movies={movies}/>
     </main>
     <Footer />
     </>

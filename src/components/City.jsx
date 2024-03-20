@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Weather from "./Weather";
+import Movies from "./Movies";
 
 function Map (props) {
   if(props.location[0] !== '') {
@@ -21,6 +22,7 @@ function Map (props) {
 
           <Col>
             <Weather forecast={props.forecast}/>
+            <Movies movies={props.movies}/>
           </Col>
         </Row>
       </Container>

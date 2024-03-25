@@ -1,5 +1,5 @@
 import Row from "react-bootstrap/Row";
-import Carousel from "react-bootstrap/Carousel";
+import Movie from "./Movie";
 import { useState } from "react";
 
 function Movies (props) {
@@ -11,17 +11,7 @@ function Movies (props) {
 
   return (
     <Row>
-      <Carousel>
-        {movieData.map((movie, idx) => (
-          <Carousel.Item key={idx}>
-            <img className="carouselImg" src={movie.backdrop} />
-            <Carousel.Caption>
-              <h3>{movie.title}</h3>
-              <p>{movie.overview}</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
-      </Carousel>
+      <Movie movieData={movieData} />
     </Row>
   );
 }

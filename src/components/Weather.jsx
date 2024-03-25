@@ -1,5 +1,5 @@
-import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
+import WeatherDay from "./WeatherDay";
 import { useState } from "react";
 
 function Weather (props) {
@@ -12,11 +12,7 @@ function Weather (props) {
   return (
     <Row>
       {weatherData.map((day, idx) => (
-        <Card key={idx} className="weatherCard">
-          <Card.Img variant="left" src={`https://cdn.weatherbit.io/static/img/icons/${day.icon}.png`} height={"120rem"} width={"120rem"} />
-          <Card.Title>{day.day}</Card.Title>
-          <Card.Text>{day.description}</Card.Text>
-        </Card>
+        <WeatherDay key={idx} icon={day.icon} day={day.day} description={day.description} />
       ))}
     </Row>
   );

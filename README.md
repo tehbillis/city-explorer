@@ -103,3 +103,15 @@ This application will be using the following technlology:
 - Finish time: 1:20p
 
 - Actual time needed to complete: 1h 20m
+
+### Refactor
+
+***
+
+- Estimate of time needed to complete: 1 h
+
+- Start time: 7:00a
+
+- Finish time: 9:23p
+
+- Actual time needed to complete: 2h 23m
